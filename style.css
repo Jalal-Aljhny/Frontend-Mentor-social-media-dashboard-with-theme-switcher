@@ -98,7 +98,7 @@ header .container .toggle p {
 }
 header .container .toggle input {
   visibility: hidden;
-  width: 0;
+  width: 4px;
   height: 0;
 }
 header .container .toggle label {
