@@ -11,7 +11,9 @@
   --body-b: #fff;
   --h2-c: #1b1e27;
   --footer-c: #111;
+  --h4-c: #111;
 }
+
 body {
   font-family: "Inter", sans-serif;
   background-color: var(--body-b);
@@ -167,11 +169,12 @@ main .container .social .box h2 {
   color: var(--h2-c);
   font-size: 35px;
 }
-main .container .social .box h4 {
+main .container .social .box h3 {
   color: var(--paragraph-c);
   font-weight: normal;
   margin: 5px auto 20px;
   letter-spacing: 2px;
+  font-size: 16px;
 }
 main .container .social .box span {
   margin-bottom: 20px;
@@ -218,6 +221,7 @@ main .container .overview .box p {
 main .container .overview .box h4 {
   margin-top: 25px;
   font-size: 25px;
+  color: var(--h4-c);
 }
 main .container .overview .box > img {
   margin-left: auto;

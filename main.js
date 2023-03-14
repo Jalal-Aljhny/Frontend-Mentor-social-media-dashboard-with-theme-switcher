@@ -7,6 +7,7 @@ let lightTheme = {
   "--body-b": "#fff",
   "--h2-c": "#1b1e27",
   "--footer-c": "#111",
+  " --h4-c": "#111",
 };
 let darkTheme = {
   "--header-b": "#20222f",
@@ -16,8 +17,23 @@ let darkTheme = {
   "--body-b": "#1d2029",
   "--h2-c": "#fffffb",
   "--footer-c": "#eee",
+  " --h4-c": "#fff",
 };
 let theme;
+
+function checkStorage() {
+  if (window.localStorage.getItem("theme") == "dark") {
+    toggle.checked = true;
+    cToggle();
+  } else {
+    toggle.checked = false;
+    cToggle();
+  }
+  if (window.localStorage.getItem("theme") != null) {
+    changeTheme(`${window.localStorage.getItem("theme")}Theme`);
+  }
+}
+checkStorage();
 
 toggle.addEventListener("change", cToggle);
 function cToggle() {
@@ -32,8 +48,10 @@ function cToggle() {
   }
   if (theme == "dark") {
     changeTheme(darkTheme);
+    window.localStorage.setItem("theme", "dark");
   } else {
     changeTheme(lightTheme);
+    window.localStorage.setItem("theme", "light");
   }
 }
 cToggle();
